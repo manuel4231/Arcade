@@ -29,6 +29,7 @@
 {
     sprite_index = sprCanguroQuieto;
     Animate = 1
+    objJugador.Guantes=true;
 
 }
 

@@ -33,6 +33,8 @@ grav = 0.2;
 hsp = 0;
 vsp = 0;
 fearofhights = 0;
+
+
 </string>
           </argument>
         </arguments>
@@ -96,14 +98,67 @@ if (place_meeting(x, y, objJugador))
 {
     if (objJugador.y &lt; y-16)
     {
-        with (objJugador) vsp = -jumpspeed;
-        instance_destroy();
-    }
-    else
-    {
-        scrMuerte();
+        global.points = global.points + 5;
     }
 }
+
+//Animacion
+if (dir!= 0) image_xscale = dir;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="objHitbox">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>with(self)
+{
+global.points = global.points + 5;
+instance_destroy();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="objJugador">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>lives-=1;
+with(other)
+{
+instance_destroy();
+}
+
 </string>
           </argument>
         </arguments>

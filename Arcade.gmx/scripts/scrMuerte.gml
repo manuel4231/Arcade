@@ -6,3 +6,4 @@ else
 {
     room_restart();
 }
+

@@ -4,44 +4,196 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sound1</sound>
+  </sounds>
   <sprites name="sprites">
-    <sprite>sprites\sprShanaQuieta</sprite>
-    <sprite>sprites\sprShanaCaminando</sprite>
-    <sprite>sprites\sprShanaSaltando</sprite>
-    <sprite>sprites\sprShanaAtaqueQ</sprite>
-    <sprite>sprites\sprShanaAtaqueC</sprite>
-    <sprite>sprites\sprCanguroQuieto</sprite>
-    <sprite>sprites\sprCanguroCaminando</sprite>
-    <sprite>sprites\sprCanguroSaltando</sprite>
-    <sprite>sprites\sprCanguroAtaqueC</sprite>
-    <sprite>sprites\sprCanguroAtaqueQ</sprite>
-    <sprite>sprites\sprMuro</sprite>
-    <sprite>sprites\sprPlataforma</sprite>
-    <sprite>sprites\sprPlataformaMov</sprite>
+    <sprites name="Shana">
+      <sprite>sprites\sprShanaQuieta</sprite>
+      <sprite>sprites\sprShanaCaminando</sprite>
+      <sprite>sprites\sprShanaSaltando</sprite>
+      <sprite>sprites\sprShanaAtaqueQ</sprite>
+      <sprite>sprites\sprShanaAtaqueC</sprite>
+      <sprite>sprites\sprHitbox</sprite>
+    </sprites>
+    <sprites name="Canguro">
+      <sprite>sprites\sprCanguroCaminando</sprite>
+      <sprite>sprites\sprCanguroQuieto</sprite>
+      <sprite>sprites\sprCanguroSaltando</sprite>
+      <sprite>sprites\sprCanguroAtaqueC</sprite>
+      <sprite>sprites\sprCanguroAtaqueQ</sprite>
+      <sprite>sprites\sprCanguroAtaqueL</sprite>
+      <sprite>sprites\sprHitboxL</sprite>
+    </sprites>
+    <sprites name="Pulpo">
+      <sprite>sprites\sprPulpoDerecha</sprite>
+      <sprite>sprites\sprPulpoQuieto</sprite>
+      <sprite>sprites\sprPulpoQQuieto</sprite>
+      <sprite>sprites\sprPulpoIzquierda</sprite>
+      <sprite>sprites\sprPulpoArriba</sprite>
+      <sprite>sprites\sprPulpoAbajo</sprite>
+      <sprite>sprites\sprPulpoAtaqueQ</sprite>
+      <sprite>sprites\sprPulpoAtaqueL</sprite>
+      <sprite>sprites\sprHitboxPulpoL</sprite>
+    </sprites>
+    <sprites name="Buho">
+      <sprite>sprites\sprBuhoQuieto</sprite>
+      <sprite>sprites\sprBuhoCaminando</sprite>
+      <sprite>sprites\sprBuhoSaltando</sprite>
+      <sprite>sprites\sprBuhoAtaqueQ</sprite>
+      <sprite>sprites\sprHitBoxBuho</sprite>
+      <sprite>sprites\sprBuhoAtaqueL</sprite>
+      <sprite>sprites\sprHitboxBuhoL</sprite>
+    </sprites>
+    <sprites name="Sabana">
+      <sprite>sprites\sprPlataformaMov</sprite>
+      <sprite>sprites\sprPlataforma</sprite>
+      <sprite>sprites\sprPlataformaEsqIzq</sprite>
+      <sprite>sprites\sprPlataformaEsqDer</sprite>
+      <sprite>sprites\sprPisoFondo</sprite>
+      <sprite>sprites\sprPisoSinManga</sprite>
+      <sprite>sprites\sprPisoHueco</sprite>
+      <sprite>sprites\sprPisoConPedacitoDeManga</sprite>
+      <sprite>sprites\sprMuro</sprite>
+      <sprite>sprites\sprPisoEsqDer</sprite>
+      <sprite>sprites\sprPisoEsqIzq</sprite>
+      <sprite>sprites\sprNube</sprite>
+    </sprites>
+    <sprites name="Bosque">
+      <sprite>sprites\sprPisoB</sprite>
+      <sprite>sprites\sprPisoProfundo</sprite>
+      <sprite>sprites\sprPlataformaMovB</sprite>
+      <sprite>sprites\sprPlataformaB</sprite>
+      <sprite>sprites\sprPlataformaEsqIzqB</sprite>
+      <sprite>sprites\sprPlataformaEsqDerB</sprite>
+    </sprites>
     <sprite>sprites\sprGuantes</sprite>
+    <sprite>sprites\sprConcha</sprite>
+    <sprite>sprites\sprPluma</sprite>
     <sprite>sprites\sprPowerUp</sprite>
     <sprite>sprites\sprEnemigo</sprite>
     <sprite>sprites\sprEnemigoNoCae</sprite>
+    <sprite>sprites\sprEnemigo2</sprite>
+    <sprite>sprites\sprEnemigo2_2</sprite>
     <sprite>sprites\sprCheckPoint</sprite>
+    <sprite>sprites\sprMenu</sprite>
+    <sprite>sprites\sprVida</sprite>
+    <sprite>sprites\sprPortal</sprite>
+    <sprite>sprites\sprPisoAgua</sprite>
+    <sprite>sprites\sprBala</sprite>
+    <sprite>sprites\sprBoss2</sprite>
+    <sprite>sprites\sprFondo</sprite>
+    <sprite>sprites\sprFuria</sprite>
+    <sprite>sprites\sprBoss2Ataque</sprite>
+    <sprite>sprites\sprBosque</sprite>
+    <sprite>sprites\sprOceano</sprite>
+    <sprite>sprites\sprDesierto</sprite>
+    <sprite>sprites\sprEnemigoOceano</sprite>
+    <sprite>sprites\sprEnemigoOceano2</sprite>
+    <sprite>sprites\sprEnemigoOceano3</sprite>
+    <sprite>sprites\sprGameOver</sprite>
+    <sprite>sprites\sprOso</sprite>
+    <sprite>sprites\sprLagartija</sprite>
+    <sprite>sprites\sprOsoAtaque</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\background0</background>
+    <background>background\background1</background>
+    <background>background\nocheee</background>
+    <background>background\background3</background>
+    <background>background\Instrucciones1</background>
+    <background>background\Instrucciones2</background>
+    <background>background\Instrucciones3</background>
+    <background>background\background7</background>
+    <background>background\background8</background>
+    <background>background\background9</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scrMuerte.gml</script>
+    <script>scripts\scrMenu.gml</script>
+    <script>scripts\scrMenuTutorial.gml</script>
+    <script>scripts\scrNext.gml</script>
+    <script>scripts\scrMenuNivel.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\Font</font>
+  </fonts>
   <objects name="objects">
     <object>objects\objMuro</object>
+    <object>objects\objdestruir</object>
     <object>objects\objJugador</object>
+    <object>objects\objeBuho</object>
+    <object>objects\objJugadorPulpo</object>
+    <object>objects\objJugadorBuho</object>
     <object>objects\objPowerUp</object>
     <object>objects\objGuantes</object>
+    <object>objects\objPluma</object>
+    <object>objects\objConcha</object>
     <object>objects\objEnemigo</object>
+    <object>objects\objEnemigoOceano</object>
+    <object>objects\objEnemigoOceano2</object>
+    <object>objects\objEnemigoOceano3</object>
+    <object>objects\objBoss1</object>
+    <object>objects\objBoss2</object>
+    <object>objects\objBoss3</object>
     <object>objects\objEnemigoNoCae</object>
+    <object>objects\objEnemigo2</object>
+    <object>objects\objEnemigo2_2</object>
     <object>objects\objCheckPoint</object>
     <object>objects\objPlataforma</object>
+    <object>objects\objPlataformaEsqDerB</object>
+    <object>objects\objPlataformaEsqIzqB</object>
+    <object>objects\objPlataformaB</object>
     <object>objects\objPlataformaMov</object>
+    <object>objects\objPlataformaMovVert</object>
+    <object>objects\objPlataformaMovB</object>
+    <object>objects\objPlataformaEsqDer</object>
+    <object>objects\objPlataformaEsqIzq</object>
+    <object>objects\objNube</object>
+    <object>objects\objScore</object>
+    <object>objects\objMenu</object>
+    <object>objects\objMenuTurorial</object>
+    <object>objects\objMenuNext</object>
+    <object>objects\objMenuNivel</object>
+    <object>objects\objControlVida</object>
+    <object>objects\objMuerte</object>
+    <object>objects\objBolita</object>
+    <object>objects\objPortal</object>
+    <object>objects\objHitbox</object>
+    <object>objects\objHitboxL</object>
+    <object>objects\objHitboxPulpo</object>
+    <object>objects\objHitboxPulpoL</object>
+    <object>objects\objHitboxBuho</object>
+    <object>objects\objHitboxBuhoL</object>
+    <object>objects\objPisoFondo</object>
+    <object>objects\objPisoSinManga</object>
+    <object>objects\objPisoHueco</object>
+    <object>objects\objPisoConPedacitoDeManga</object>
+    <object>objects\objPisoEsqDer</object>
+    <object>objects\objPisoEsqIzq</object>
+    <object>objects\objPisoB</object>
+    <object>objects\objPisoProfundo</object>
+    <object>objects\objPisoAgua</object>
+    <object>objects\objBala</object>
+    <object>objects\objFondo</object>
+    <object>objects\objFuria</object>
+    <object>objects\objBosque</object>
+    <object>objects\objOceano</object>
+    <object>objects\objDesierto</object>
+    <object>objects\objGameOver</object>
+    <object>objects\objSonido</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\Menu</room>
+    <room>rooms\MenuTutorial</room>
+    <room>rooms\Menu2</room>
+    <room>rooms\Menu3</room>
+    <room>rooms\Bosque</room>
+    <room>rooms\Oceano</room>
+    <room>rooms\Desierto</room>
+    <room>rooms\Niveles</room>
+    <room>rooms\Gameover</room>
     <room>rooms\Initialize</room>
     <room>rooms\NivelPrueba</room>
   </rooms>

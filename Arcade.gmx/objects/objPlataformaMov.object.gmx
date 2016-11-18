@@ -109,7 +109,7 @@ if (instance_exists(objJugador))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite(sprPlataforma,0,x,y);
+            <string>draw_sprite(sprPlataformaMov,0,x,y);
 </string>
           </argument>
         </arguments>

@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>/// Inicialización de las variables
 
-grav = 0.2;
+grav = 0.3;
 hsp = 0;
 hsp_carry = 0;
 vsp = 0;
@@ -41,17 +41,39 @@ jumpspeed_powerup = 9;
 
 jumpspeed = jumpspeed_normal
 
-if (global.checkpointR == room)
-{
-    x = global.checkpointx;
-    y = global.checkpointy;
-}
-
 key_down = 0;
 
 Animate = -1;
 AnimateCanguro = 1;
+AnimatePulpo = 2;
 
+Guantes=false;
+
+Damage = 0;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>Damage=0;
 </string>
           </argument>
         </arguments>
@@ -75,7 +97,6 @@ AnimateCanguro = 1;
           <argument>
             <kind>1</kind>
             <string>jumpspeed = jumpspeed_normal;
-
 </string>
           </argument>
         </arguments>
@@ -187,6 +208,252 @@ else
     if (vsp &lt;0) sprite_index = sprCanguroSaltando;
 }
 }
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Melee
+key_melee=keyboard_check(ord('X'));
+
+//====Hitbox
+if(key_melee)
+{
+    if(Guantes=true)
+        {
+        sprite_index=sprCanguroAtaqueC;
+        }
+    if(Guantes=false)
+        {
+        sprite_index=sprShanaAtaqueQ;
+        }
+
+{
+if (image_index &gt;= 1) &amp;&amp; (image_index &lt;=3)
+{
+    with(instance_create(x,y,objHitbox))
+    {
+        image_xscale = other.image_xscale;
+    }
+}
+}
+}
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Melee1
+key_melee1=keyboard_check(ord('Z'));
+
+//====Hitbox
+if(key_melee1)
+{
+    if(Guantes=true)
+        {
+        sprite_index=sprCanguroAtaqueL;
+        }
+    if(Guantes=false)
+        {
+        sprite_index=sprShanaAtaqueC;
+        }
+
+{
+if (image_index &gt;= 1) &amp;&amp; (image_index &lt;=3)
+{
+    with(instance_create(x,y,objHitboxL))
+    {
+        image_xscale = other.image_xscale;
+    }
+}
+}
+}
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="objdestruir">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>room_restart();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="objPortal">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+
+if(room_exists(room_next(room)))
+    {room_goto_next();}
+    else
+    {room_goto(Gameover);}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="objBolita">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (place_meeting(x,y,objBolita))
+    {
+    with(other){instance_destroy();}
+    Bolita = true
+    }
+    
+global.points = global.points + 5;
+    
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="objEnemigo2_2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>room_restart();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="objEnemigo2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>room_restart();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="objBoss3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>room_restart();
 </string>
           </argument>
         </arguments>
